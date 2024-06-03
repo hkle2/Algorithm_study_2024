@@ -1,6 +1,6 @@
 def solution(arr, delete_list):
     answer = []
-    for i in arr:
-        if i not in delete_list:
-            answer.append(i)
-    return answer
+    for i in delete_list:
+        if i in arr:
+            arr.remove(i)
+    return arr
