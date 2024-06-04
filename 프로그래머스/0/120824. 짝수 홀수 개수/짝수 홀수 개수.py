@@ -1,12 +1,8 @@
 def solution(num_list):
-    answer = []
-    odd = 0
-    even = 0
+    answer = [0, 0]
     for i in num_list:
         if i % 2 == 0:
-            even += 1
+            answer[0] += 1
         else:
-            odd += 1
-    answer.append(even)
-    answer.append(odd)
+            answer[1] += 1
     return answer
