@@ -1,10 +1,6 @@
 def solution(num, k):
-    answer = 0
+    answer = -1
     a = str(num)
-    for i in range(len(a)):
-        if int(a[i]) == k:
-            answer = i + 1
-            break
-        else:
-            answer = -1
+    if a.find(str(k)) != -1:
+        answer = a.find(str(k)) + 1
     return answer
