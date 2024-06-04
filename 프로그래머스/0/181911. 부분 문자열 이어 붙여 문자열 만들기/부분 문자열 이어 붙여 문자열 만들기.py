@@ -1,7 +1,5 @@
 def solution(my_strings, parts):
     answer = ''
-    for i in range(len(my_strings)):
-        start = parts[i][0]
-        end = parts[i][1]
-        answer += my_strings[i][start:end+1]
+    for s, (start, end) in zip(my_strings, parts):
+        answer += s[start:end+1]
     return answer
