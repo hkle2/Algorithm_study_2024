@@ -20,7 +20,7 @@ class Solution:
         # for key in nums_dict.keys():
         #     if nums_dict[key] > m:
         #         answer.append(key)
-
+        # 아아
         # for i in nums:
         #     if nums.count(i) > len(nums) / 3:
         #         answer.append(i)
