@@ -11,3 +11,10 @@ def solution(numLog):
         else:
             answer += "a"
     return answer
+
+def solution(numLog):
+    answer = ''
+    n = dict(zip([1, -1, 10, -10], ["w", "s", "d", "a"]))
+    for i in range(len(numLog)-1):
+        answer += n[numLog[i + 1] - numLog[i]]
+    return answer
