@@ -3,3 +3,7 @@ def solution(myString, pat):
         if myString[:i].endswith(pat):
             answer = myString[:i]
     return answer
+
+def solution(myString, pat):
+    answer = myString[:myString.rfind(pat)+len(pat)]
+    return answer
