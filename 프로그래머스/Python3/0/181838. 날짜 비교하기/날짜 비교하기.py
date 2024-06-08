@@ -4,8 +4,6 @@ def solution(date1, date2):
         if date1[i] < date2[i]:
             answer = 1
             break
-        elif date1[i] == date2[i]:
-            answer = 0
-        else:
+        elif date1[i] > date2[i]:
             break
     return answer
