@@ -1,13 +1,17 @@
 def solution(n):
     answer = 1
-    while True:
-        mul = 1
-        for i in range(1, answer+1):
-            mul *= i
-        if mul == n:
-            break
-        if mul > n:
-            answer -= 1
-            break
+    f = 1
+    while f <= n:
         answer += 1
+        f *= answer
+    answer -= 1
+    return answer
+
+import math
+
+def solution(n):
+    answer = 1
+    while math.factorial(answer) <= n:
+        answer += 1
+    answer -= 1
     return answer
