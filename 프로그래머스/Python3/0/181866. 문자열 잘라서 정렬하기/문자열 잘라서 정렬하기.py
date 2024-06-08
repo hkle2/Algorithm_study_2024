@@ -6,3 +6,8 @@ def solution(myString):
         if i:
             answer.append(i)
     return answer
+
+def solution(myString):
+    answer = " ".join(myString.split("x")).split()
+    answer = sorted(answer)
+    return answer
