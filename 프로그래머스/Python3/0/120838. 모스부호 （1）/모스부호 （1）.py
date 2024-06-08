@@ -8,7 +8,6 @@ morse = {
 
 def solution(letter):
     answer = ''
-    l = letter.split()
-    for i in l:
+    for i in letter.split():
         answer += morse[i]
     return answer
