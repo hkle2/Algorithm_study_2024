@@ -8,3 +8,11 @@ def solution(strArr):
         dict[n] += 1
     answer = max(dict.values())
     return answer
+
+def solution(strArr):
+    answer = 0
+    dict = {}
+    for i in strArr:
+        dict[len(i)] = dict.get(len(i), 0) + 1
+    answer = max(dict.values())
+    return answer
