@@ -10,3 +10,15 @@ def solution(s):
             answer += key
     answer = "".join(sorted(answer))
     return answer
+
+def solution(s):
+    answer = "".join(sorted(i for i in s if s.count(i) == 1))
+    return answer
+
+def solution(s):
+    answer = ''
+    for i in s:
+        if s.count(i) == 1:
+            answer += i
+    answer = "".join(sorted(answer))
+    return answer
