@@ -1,14 +1,3 @@
-# def solution(arr):
-#     n = len(arr)
-#     i = 0
-#     while True:
-#         i += 1
-#         if 2**i >= n:
-#             break
-#     for i in range(2**i-n):
-#         arr.append(0)
-#     return arr
-
 def solution(arr):
     n = len(arr)
     i = 0
