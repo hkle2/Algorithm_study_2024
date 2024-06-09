@@ -12,3 +12,10 @@ def solution(myStr):
     if answer == [""]:
         answer = ["EMPTY"]
     return answer
+
+def solution(myStr):
+    arr = myStr.replace("a", " ").replace("b", " ").replace("c", " ")
+    answer = arr.split()
+    if not answer:
+        answer = ["EMPTY"]
+    return answer
