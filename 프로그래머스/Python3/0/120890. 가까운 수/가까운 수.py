@@ -13,3 +13,8 @@ def solution(array, n):
         else:
             answer = array[l-1]
     return answer
+
+def solution(array, n):
+    array.sort(key=lambda x: (abs(n-x), x))
+    answer = array[0]
+    return answer
