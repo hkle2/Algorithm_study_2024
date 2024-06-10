@@ -1,8 +1,11 @@
 def solution(numbers, k):
-    n = len(numbers)
-    l = 0
+    n = 0
     for i in range(k - 1):
-        l += 2
-    l %= n
-    answer = numbers[l]
+        n += 2
+    n %= len(numbers)
+    answer = numbers[n]
+    return answer
+
+def solution(numbers, k):
+    answer = numbers[2 * (k - 1) % len(numbers)]
     return answer
