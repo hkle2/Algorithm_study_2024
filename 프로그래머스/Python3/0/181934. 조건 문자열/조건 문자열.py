@@ -7,3 +7,7 @@ def solution(ineq, eq, n, m):
     elif n == m and eq == "=":
         answer = 1
     return answer
+
+def solution(ineq, eq, n, m):
+    answer = int(eval(str(n) + ineq + eq.replace("!", "") + str(m)))
+    return answer
