@@ -1,7 +1,6 @@
 def solution(arr, queries):
     answer = []
-    for i in range(len(queries)):
-        s, e, k = queries[i]
+    for s, e, k in queries:
         l = []
         for j in range(s, e+1):
             if arr[j] > k:
