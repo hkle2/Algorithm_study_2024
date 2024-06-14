@@ -1,12 +1,11 @@
 def solution(clothes):
     answer = 1
-    clothes_dict = {}
-    for value, key in clothes:
-        if key not in clothes_dict:
-            clothes_dict[key] = ["none"]
-        clothes_dict[key] += [value]
-    print(clothes_dict)
-    for i in clothes_dict.values():
+    c = {}
+    for v, k in clothes:
+        if k not in c:
+            c[k] = ["none"]
+        c[k] += [v]
+    for i in c.values():
         answer *= len(i)
     answer -= 1
     return answer
