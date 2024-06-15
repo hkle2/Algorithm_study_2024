@@ -7,3 +7,13 @@ def solution(quiz):
         else:
             answer.append("X")
     return answer
+
+def solution(quiz):
+    answer = []
+    for q in quiz:
+        eq = q.replace("=", "==")
+        if eval(eq):
+            answer.append("O")
+        else:
+            answer.append("X")
+    return answer
