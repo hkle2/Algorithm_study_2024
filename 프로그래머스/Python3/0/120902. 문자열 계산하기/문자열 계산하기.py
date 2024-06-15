@@ -11,12 +11,12 @@ def solution(my_string):
     return answer
 
 def solution(my_string):
-    answer = eval(my_string)
-    return answer
-
-def solution(my_string):
     answer = 0
     l = my_string.replace("- ", "+ -").split(" + ")
     for i in l:
         answer += int(i)
+    return answer
+
+def solution(my_string):
+    answer = eval(my_string)
     return answer
