@@ -9,3 +9,9 @@ def solution(numbers):
                 break
     answer = "".join(num)
     return int(answer)
+
+def solution(numbers):
+    l = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+    for i, num in enumerate(l):
+        numbers = numbers.replace(num, str(i))
+    return int(numbers)
