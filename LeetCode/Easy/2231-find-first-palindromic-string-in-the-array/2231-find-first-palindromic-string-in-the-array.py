@@ -9,9 +9,9 @@ class Solution:
                 break
         return answer
 
-# class Solution:
-#     def firstPalindrome(self, words: List[str]) -> str:
-#         for i in words:
-#             if i == i[::-1]:
-#                 return i
-#         return ""
+class Solution:
+    def firstPalindrome(self, words: List[str]) -> str:
+        for i in words:
+            if i == i[::-1]:
+                return i
+        return ""
