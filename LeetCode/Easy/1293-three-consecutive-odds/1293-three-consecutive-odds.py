@@ -1,6 +1,5 @@
 class Solution:
     def threeConsecutiveOdds(self, arr: List[int]) -> bool:
-        answer = False
         for i in range(len(arr)-2):
             cnt = 0
             for j in range(3):
@@ -8,4 +7,4 @@ class Solution:
                     cnt += 1
             if cnt == 3:
                 return True
-        return answer
+        return False
