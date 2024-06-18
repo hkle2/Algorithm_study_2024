@@ -7,7 +7,6 @@ class Solution:
                 break
         return answer
 
-
 class Solution:
     def threeConsecutiveOdds(self, arr: List[int]) -> bool:
         answer = False
