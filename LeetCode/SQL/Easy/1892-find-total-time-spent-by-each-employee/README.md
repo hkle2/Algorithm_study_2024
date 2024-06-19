@@ -29,7 +29,7 @@ It is guaranteed that no two events on the same day intersect in time, and in_ti
 
 <pre>
 <strong>Input:</strong> 
-Employees table:ㅇ
+Employees table:
 +--------+------------+---------+----------+
 | emp_id | event_day  | in_time | out_time |
 +--------+------------+---------+----------+
