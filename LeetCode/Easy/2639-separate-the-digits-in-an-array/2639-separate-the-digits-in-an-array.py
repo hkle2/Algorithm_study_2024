@@ -4,7 +4,7 @@ class Solution:
         for num in nums:
             num_str = str(num)
             for c in num_str:
-                answer.append(int(s[j]))
+                answer.append(int(c))
         return answer
 
 class Solution:
