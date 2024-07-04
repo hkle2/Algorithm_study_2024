@@ -7,6 +7,6 @@ class Solution:
                 if j == 1:
                     cnt += 1
             answer.append(cnt)
-        n = answer.index(max(answer))
-        m = max(answer)
-        return [n, m]
+        m = answer.index(max(answer))
+        n = max(answer)
+        return [m, n]
