@@ -5,4 +5,3 @@ class Solution:
             n = (i + k) % len(s)
             answer += s[n]
         return answer
-        
