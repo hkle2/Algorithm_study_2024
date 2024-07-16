@@ -12,7 +12,7 @@ class Solution:
         l = [s]
         for i in range(len(s)-1):
             if int(s[i]) % 2 == int(s[i+1]) % 2:
-                l.append(str(s[:i] + s[i+1] + s[i] + s[i+2:]))
+                l.append(s[:i] + s[i+1] + s[i] + s[i+2:])
         l.sort()
         return l[0]
 
