@@ -1,3 +1,16 @@
+# class Solution:
+#     def numberOfAlternatingGroups(self, colors: List[int]) -> int:
+#         answer = 0
+#         # for문, modulo 사용해줄 것
+#         for i in range(len(colors)):
+#             color_one = colors[i]
+#             color_two = colors[(i+1) % len(colors)]
+#             color_three = colors[(i+2) % len(colors)]
+#             # color_one과 color_two가 서로 다르고
+#             # color_two와 color_three가 서로 다른 경우
+#             # alternating group 조건 성립! answer에 1 더해주기
+#         return answer
+
 class Solution:
     def numberOfAlternatingGroups(self, colors: List[int]) -> int:
         answer = 0
