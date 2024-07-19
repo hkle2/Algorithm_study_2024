@@ -1,8 +1,7 @@
-import numpy as np
+import math
 class Solution:
     def arraySign(self, nums: List[int]) -> int:
         p = math.prod(nums)
-        print(p)
         if p > 0:
             answer = 1
         elif p < 0:
