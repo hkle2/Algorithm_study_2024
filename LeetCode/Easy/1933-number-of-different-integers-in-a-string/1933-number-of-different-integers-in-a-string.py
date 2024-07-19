@@ -1,18 +1,32 @@
 class Solution:
     def numDifferentIntegers(self, word: str) -> int:
-        answer = []
+        nums = set()
         tmp = ""
-        for w in word:
-            if w.isnumeric():
-                tmp += w
+        for c in word:
+            if c.isnumeric():
+                tmp += c
             elif tmp:
-                answer.append(tmp)
+                nums.add(int(tmp))
                 tmp = ""
         if tmp:
-            answer.append(tmp)
-        for i in range(len(answer)):
-            answer[i] = int(answer[i])
-        return len(set(answer))
+            nums.add(int(tmp))
+        return len(nums)
+
+# class Solution:
+#     def numDifferentIntegers(self, word: str) -> int:
+#         answer = []
+#         tmp = ""
+#         for w in word:
+#             if w.isnumeric():
+#                 tmp += w
+#             elif tmp:
+#                 answer.append(tmp)
+#                 tmp = ""
+#         if tmp:
+#             answer.append(tmp)
+#         for i in range(len(answer)):
+#             answer[i] = int(answer[i])
+#         return len(set(answer))
 
 # class Solution:
 #     def numDifferentIntegers(self, word: str) -> int:
