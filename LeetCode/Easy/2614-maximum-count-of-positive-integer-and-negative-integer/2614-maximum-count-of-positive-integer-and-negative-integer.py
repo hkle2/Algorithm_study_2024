@@ -1,6 +1,5 @@
 class Solution:
     def maximumCount(self, nums: List[int]) -> int:
-        answer = 0
         pos = 0
         neg = 0
         for i in range(len(nums)):
@@ -9,7 +8,6 @@ class Solution:
             elif nums[i] < 0:
                 neg += 1
         if pos >= neg:
-            answer = pos
+            return pos
         else:
-            answer = neg
-        return answer
+            return neg
