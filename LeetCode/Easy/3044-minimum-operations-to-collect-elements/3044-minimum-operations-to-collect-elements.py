@@ -9,7 +9,7 @@ class Solution:
             answer += 1
             # target이 collections안에 모두 포함되는 경우, break
             # set intersection을 사용
-            if len(target.intersection(collections)) == k:
+            if target.intersection(collections) == target:
                 break
         return answer
 
@@ -18,7 +18,6 @@ class Solution:
 #         answer = 0
 #         collection = set()
 #         for i, n in enumerate(reversed(nums)):
-#             print(i, n)
 #             if n > k:
 #                 continue
 #             collection.add(n)
