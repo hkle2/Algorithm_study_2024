@@ -1,5 +1,6 @@
 class Solution:
     def canAliceWin(self, nums: List[int]) -> bool:
+        answer = False
         single = 0
         double = 0
         for num in nums:
@@ -8,5 +9,5 @@ class Solution:
             else:
                 double += num
         if single != double:
-            return True
-        return False
+            answer = True
+        return answer
