@@ -1,16 +1,15 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        answer = True
         d = {}
         for i in range(len(s)):
-            if (s[i] in d):
+            if s[i] in d:
                 if d[s[i]] != t[i]:
-                    answer = False
+                    return False
             elif t[i] in d.values():
-                answer = False
+                return False
             else:
                 d[s[i]] = t[i]
-        return answer
+        return True
 
 # class Solution:
 #     def isIsomorphic(self, s: str, t: str) -> bool:
