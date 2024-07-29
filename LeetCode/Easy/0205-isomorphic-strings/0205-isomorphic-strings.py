@@ -3,7 +3,7 @@ class Solution:
         answer = True
         d = {}
         for i in range(len(s)):
-            if s[i] in d:
+            if s[i] in d.keys():
                 if d[s[i]] != t[i]:
                     answer = False
             elif t[i] in d.values():
