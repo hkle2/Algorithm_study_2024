@@ -1,12 +1,12 @@
 class Solution:
     def canAliceWin(self, nums: List[int]) -> bool:
-        sum1 = 0
-        sum2 = 0
+        single = 0
+        double = 0
         for num in nums:
             if num < 10:
-                sum1 += num
+                single += num
             else:
-                sum2 += num
-        if sum1 != sum2:
+                double += num
+        if single != double:
             return True
         return False
