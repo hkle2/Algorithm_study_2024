@@ -8,4 +8,5 @@ class Solution:
                 if nums[j] % divisors[i] == 0:
                     cnt += 1
             div.append(cnt)
-        return divisors[div.index(max(div))]
+        i = div.index(max(div))
+        return divisors[i]
