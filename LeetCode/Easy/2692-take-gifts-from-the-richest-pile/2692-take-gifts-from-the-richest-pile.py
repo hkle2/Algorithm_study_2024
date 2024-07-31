@@ -5,7 +5,7 @@ class Solution:
             gifts = sorted(gifts)
             max_gifts = gifts.pop()
             # 가져온 가장 큰 값에 제곱근을 취해서 다시 gifts에 append
-            gifts.append(int(max_gifts**0.5)) 
+            gifts.append(int(math.sqrt(max_gifts)))
         return sum(gifts)
 
 # class Solution:
