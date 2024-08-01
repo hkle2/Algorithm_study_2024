@@ -14,5 +14,5 @@ class Solution:
                 answer += 1
             if "X" not in s:
                 return answer
-        return answer
+        # return answer
         
