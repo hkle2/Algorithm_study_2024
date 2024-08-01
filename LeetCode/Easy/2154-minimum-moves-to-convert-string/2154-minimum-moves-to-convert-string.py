@@ -1,10 +1,9 @@
 class Solution:
     def minimumMoves(self, s: str) -> int:
         s = list(s)
-        n = len(s)
         answer = 0
-        for i in range(n-2):
-            if s[i] == "O" and i+3 < n:
+        for i in range(len(s)-2):
+            if s[i] == "O" and i+3 < len(s):
                 continue
             cnt = 0
             for j in range(3):
