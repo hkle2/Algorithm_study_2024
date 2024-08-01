@@ -4,7 +4,7 @@ class Solution:
         n = len(s)
         answer = 0
         for i in range(n-2):
-            if s[i] == "O" and (i+2 <= n-2):
+            if s[i] == "O" and i+3 < n:
                 continue
             cnt = 0
             for j in range(3):
