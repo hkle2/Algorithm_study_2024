@@ -1,29 +1,32 @@
+# class Solution:
+#     def minMaxDifference(self, num: int) -> int:
+#         # 가장 큰 수는 무조건 9로 치환한 수
+#         # 가장 작은 수는 무조건 0으로 치환한 수
+#         nums_str = str(num)
+#         for i in range(10):
+#             print(i, nums_str.replace(str(i), "9"))
+#             print(i, nums_str.replace(str(i), "0"))
+#         return 0
+
 class Solution:
     def minMaxDifference(self, num: int) -> int:
-        nums = str(num)
-        m = int(nums.replace(nums[0], "0"))
-        for n in nums:
-            if n != "9":
-                return int(nums.replace(n, "9")) - m
-        return num - m
+        num_str = str(num)
+        max_num = num_str
+        for char in num_str:
+            if char != "9":
+                max_num = num_str.replace(char, "9")
+                break
+        for char in num_str:
+            if char != "0":
+                min_num = num_str.replace(char, "0")
+                break
+        return int(max_num) - int(min_num)
 
 # class Solution:
 #     def minMaxDifference(self, num: int) -> int:
-#         max_answer = ""
-#         min_answer = ""
-#         num_list = list(str(num))
-#         max_i = num_list[0]
-#         for i in range(len(num_list)):
-#             if num_list[i] == num_list[0]:
-#                 if num_list[i] == "9":
-#                     max_answer += str(num_list[i])
-#                 else:
-#                     max_answer += "9"
-#             else:
-#                 max_answer += str(num_list[i])
-#         for i in range(len(num_list)):
-#             if num_list[i] == num_list[0]:
-#                 min_answer += "0"
-#             else:
-#                 min_answer += str(num_list[i])
-#         return int(max_answer) - int(min_answer)
+#         nums = str(num)
+#         m = int(nums.replace(nums[0], "0"))
+#         for n in nums:
+#             if n != "9":
+#                 return int(nums.replace(n, "9")) - m
+#         return num - m
