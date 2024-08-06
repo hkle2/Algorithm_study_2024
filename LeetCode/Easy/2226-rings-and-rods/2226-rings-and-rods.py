@@ -1,6 +1,5 @@
 class Solution:
     def countPoints(self, rings: str) -> int:
-        answer = 0
         # key: rod
         # value: ring color
         d = defaultdict(set)
@@ -11,8 +10,9 @@ class Solution:
             d[rod].add(ring)
         # dictionary를 다 생성하고 나서
         # RGB 세가지 색상이 모두 포함된 rod의 개수 세어보기
-        for key, value in d.items():
-            if len(value) == 3:
+        answer = 0
+        for rod, colors in d.items():
+            if len(colors) == 3:
                 answer += 1
         return answer
 
