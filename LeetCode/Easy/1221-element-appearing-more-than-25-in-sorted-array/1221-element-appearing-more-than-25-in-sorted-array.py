@@ -6,7 +6,8 @@ class Solution:
             # cnt를 quater와 비교
             # 만약 quater 보다 크다면, answer로 지정할 것
             if cnt > quater:
-                return num
+                answer = num
+        return answer
 
 # class Solution:
 #     def findSpecialInteger(self, arr: List[int]) -> int:
