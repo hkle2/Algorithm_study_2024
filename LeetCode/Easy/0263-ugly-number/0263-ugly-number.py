@@ -12,8 +12,7 @@ class Solution:
                     flag = True
                     n /= factor
                     break
-            if not flag:
-                return False
+            return flag
         return True
 
 class Solution:
