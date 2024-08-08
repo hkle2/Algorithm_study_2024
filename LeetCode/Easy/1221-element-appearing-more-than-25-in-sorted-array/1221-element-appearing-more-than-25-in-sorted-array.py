@@ -5,9 +5,10 @@ class Solution:
         for num in arr:
             d[num] += 1
         standard = len(arr) / 4
-        for num, cnt  in d.items():
-            if cnt >= standard:
+        for num, cnt in d.items():
+            if cnt > standard:
                 answer = num
+                break
         return answer
 
 # class Solution:
