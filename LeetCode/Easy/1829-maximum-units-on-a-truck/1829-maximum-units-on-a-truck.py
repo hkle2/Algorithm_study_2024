@@ -6,7 +6,7 @@ class Solution:
         for numBoxes, unit in sortedBoxTypes:
             # 트럭에 실을 수 있는 수량만큼 싣고
             # 실을 수량 * 유닛만큼 answer에 더해주기
-            if truckSize >= numBoxes:
+            if truckSize > numBoxes:
                 answer += numBoxes * unit
                 truckSize -= numBoxes
             else:
