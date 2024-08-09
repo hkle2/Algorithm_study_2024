@@ -21,5 +21,5 @@ class Solution:
                 truckSize -= boxTypes[i][0]
             else:
                 answer += truckSize * boxTypes[i][1]
-                break
+                truckSize -= truckSize
         return answer
