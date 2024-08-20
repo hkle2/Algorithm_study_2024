@@ -1,10 +1,10 @@
 import sys
 
-h, s = map(int, sys.stdin.readline().split(" "))
+H, M = map(int, sys.stdin.readline().split(" "))
 
-if s >= 45:
-    print(h, (s - 45))
-elif h > 0 and s < 45:
-    print((h - 1), (s + 15))
+if M >= 45:
+    print(H, M - 45)
+elif H > 0 and M < 45:
+    print(H - 1, M + 15)
 else:
-    print(23, (s + 15))
+    print(23, M + 15)
