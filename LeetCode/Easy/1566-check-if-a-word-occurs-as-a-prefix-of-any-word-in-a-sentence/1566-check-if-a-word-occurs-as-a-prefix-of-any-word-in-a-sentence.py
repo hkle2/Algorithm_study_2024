@@ -1,10 +1,12 @@
-# class Solution:
-#     def isPrefixOfWord(self, sentence: str, searchWord: str) -> int:
-#         # split, enumerate, startswith
-#         for i, s in enumerate(sentence.split(" ")):
-#             if s.startswith(searchWord):
-#                 return i + 1
-#         return -1
+class Solution:
+    def isPrefixOfWord(self, sentence: str, searchWord: str) -> int:
+        answer = -1
+        word_list = sentence.split(" ")
+        for i, word in enumerate(word_list):
+            if word.startswith(searchWord):
+                answer = i + 1
+                break
+        return answer
 
 class Solution:
     def isPrefixOfWord(self, sentence: str, searchWord: str) -> int:
