@@ -1,12 +1,9 @@
 import sys
 
-answer, n = 0, 0
+l = []
 
-for i in range(1, 10):
-    num = int(sys.stdin.readline().strip())
-    if answer < num:
-        answer = num
-        n = i
-        
-print(answer)
-print(n)
+for i in range(9):
+    l.append(int(sys.stdin.readline().strip()))
+
+print(max(l))
+print(l.index(max(l)) + 1)
