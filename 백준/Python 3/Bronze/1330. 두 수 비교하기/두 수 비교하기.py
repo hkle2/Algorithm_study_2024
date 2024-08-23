@@ -1,6 +1,6 @@
 import sys
 
-A, B = map(int, sys.stdin.readline().split(" "))
+A, B = map(int, sys.stdin.readline().split())
 
 if A > B:
     print(">")
