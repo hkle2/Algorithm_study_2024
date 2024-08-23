@@ -1,6 +1,6 @@
 import sys
 
-H, M = map(int, sys.stdin.readline().split(" "))
+H, M = map(int, sys.stdin.readline().split())
 
 if M >= 45:
     print(H, M - 45)
