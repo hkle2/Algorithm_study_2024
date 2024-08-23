@@ -1,6 +1,6 @@
 import sys
 
-A, B = map(int, sys.stdin.readline().split(" "))
+A, B = map(int, sys.stdin.readline().split())
 C = int(sys.stdin.readline().strip())
 
 B += C
