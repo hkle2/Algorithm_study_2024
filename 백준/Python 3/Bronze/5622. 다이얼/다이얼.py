@@ -1,12 +1,12 @@
 import sys
 
 nums = sys.stdin.readline().strip()
-dial = {2: ["A", "B", "C"], 3: ["D", "E", "F"], 4: ["G", "H", "I"], 5: ["J", "K", "L"], 6: ["M", "N", "O"], 7: ["P", "Q", "R", "S"], 8: ["T", "U", "V"], 9: ["W", "X", "Y", "Z"]}
+dial = ["ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"]
 answer = 0
 
 for num in nums:
-    for n, d in dial.items():
-        if num in d:
-            answer += n+1
+    for i in range(len(dial)):
+        if num in dial[i]:
+            answer += i+3
 
 print(answer)
