@@ -1,5 +1,5 @@
 import sys
 
-string = sys.stdin.readline().strip()
+s = sys.stdin.readline().strip()
 
-print(len(string))
+print(len(s))
