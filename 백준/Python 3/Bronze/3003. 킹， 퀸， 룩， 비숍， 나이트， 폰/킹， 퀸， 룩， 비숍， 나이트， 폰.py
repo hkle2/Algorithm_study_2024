@@ -1,11 +1,7 @@
 import sys
 
-pieces1 = [1, 1, 2, 2, 2, 8]
-pieces2 = list(map(int, sys.stdin.readline().split()))
-pieces = []
+ori_pieces = [1, 1, 2, 2, 2, 8]
+cur_pieces = list(map(int, sys.stdin.readline().split()))
 
-for i in range(len(pieces1)):
-    pieces.append(pieces1[i] - pieces2[i])
-
-for piece in pieces:
-    print(piece, end=" ")
+for i in range(len(ori_pieces)):
+    print(ori_pieces[i] - cur_pieces[i], end=" ")
