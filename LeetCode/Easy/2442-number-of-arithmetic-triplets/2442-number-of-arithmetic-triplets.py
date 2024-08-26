@@ -8,6 +8,8 @@ class Solution:
                         answer += 1
         return answer
 
+from itertools import combinations
+
 class Solution:
     def arithmeticTriplets(self, nums: List[int], diff: int) -> int:
         answer = 0
