@@ -7,6 +7,4 @@ class Solution:
         answer = []
         for value, weight in items:
             items_dict[value] += weight
-        for key, value in items_dict.items():
-            answer.append([key, value])
-        return sorted(answer)
+        return sorted(items_dict.items())
