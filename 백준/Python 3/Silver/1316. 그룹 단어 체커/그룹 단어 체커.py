@@ -8,14 +8,11 @@ for n in range(N):
     seen = []
     s = sys.stdin.readline().strip()
     for i in range(len(s)):
-        if s[i] not in seen:
+        if (s[i] not in seen) or (s[i-1] == s[i]):
             seen.append(s[i])
         else:
-            if s[i-1] == s[i]:
-                continue
-            else:
-                flag = False
-                break
+            flag = False
+            break
     if flag:
         answer += 1
 
