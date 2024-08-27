@@ -11,9 +11,9 @@ class Solution:
                 cnt += 1
             else:
                 cnt = 1
-            prev = c
             if cnt < 3:
                 answer += c
+            prev = c
         return answer
 
 # class Solution:
