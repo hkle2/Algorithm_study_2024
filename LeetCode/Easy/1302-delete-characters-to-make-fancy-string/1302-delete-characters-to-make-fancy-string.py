@@ -1,17 +1,17 @@
-# class Solution:
-#     def makeFancyString(self, s: str) -> str:
-#         answer = ""
-#         prev = ""
-#         cnt = 0
-#         for c in s:
-#             if c == prev:
-#                 cnt += 1
-#             else:
-#                 cnt = 1
-#             if cnt < 3:
-#                 answer += c
-#             prev = c
-#         return answer
+class Solution:
+    def makeFancyString(self, s: str) -> str:
+        answer = ""
+        prev = ""
+        cnt = 0
+        for c in s:
+            if c == prev:
+                cnt += 1
+            else:
+                cnt = 1
+            if cnt < 3:
+                answer += c
+            prev = c
+        return answer
 
 class Solution:
     def makeFancyString(self, s: str) -> str:
