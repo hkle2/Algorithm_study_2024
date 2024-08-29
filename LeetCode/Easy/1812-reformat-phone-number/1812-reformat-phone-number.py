@@ -1,17 +1,17 @@
-# class Solution:
-#     def reformatNumber(self, number: str) -> str:
-#         answer = []
-#         number = number.replace(" ", "")
-#         number = number.replace("-", "")
-#         while len(number) > 4:
-#             answer.append(number[:3])
-#             number = number[3:]
-#         if len(number) == 4:
-#             answer.append(number[:2])
-#             answer.append(number[2:])
-#         else:
-#             answer.append(number)
-#         return "-".join(answer)
+class Solution:
+    def reformatNumber(self, number: str) -> str:
+        answer = []
+        number = number.replace(" ", "")
+        number = number.replace("-", "")
+        while len(number) > 4:
+            answer.append(number[:3])
+            number = number[3:]
+        if len(number) == 4:
+            answer.append(number[:2])
+            answer.append(number[2:])
+        else:
+            answer.append(number)
+        return "-".join(answer)
 
 class Solution:
     def reformatNumber(self, number: str) -> str:
