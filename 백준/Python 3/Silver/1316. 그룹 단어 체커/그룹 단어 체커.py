@@ -3,17 +3,16 @@ import sys
 N = int(sys.stdin.readline().strip())
 answer = 0
 
-for n in range(N):
-    flag = True
+for _ in range(N):
     seen = []
-    s = sys.stdin.readline().strip()
-    for i in range(len(s)):
-        if (s[i] not in seen) or (s[i-1] == s[i]):
-            seen.append(s[i])
+    string = sys.stdin.readline().strip()
+    for s in string:
+        if (s not in seen) or (seen[-1] == s):
+            seen.append(s)
         else:
-            flag = False
+            seen = []
             break
-    if flag:
+    if len(seen) != 0:
         answer += 1
 
 print(answer)
