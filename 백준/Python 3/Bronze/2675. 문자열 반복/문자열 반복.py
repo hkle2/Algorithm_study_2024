@@ -2,7 +2,7 @@ import sys
 
 T = int(sys.stdin.readline().strip())
 
-for t in range(T):
+for _ in range(T):
     R, S = sys.stdin.readline().split()
     for i in range(len(S)):
         print(S[i] * int(R), end="")
