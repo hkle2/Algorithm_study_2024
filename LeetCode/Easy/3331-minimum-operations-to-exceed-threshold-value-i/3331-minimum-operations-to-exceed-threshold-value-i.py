@@ -5,7 +5,9 @@ class Solution:
         nums = sorted(nums)
         for i in range(len(nums)):
             if nums[i] >= k:
-                return i
+                answer = i
+                break
+        return answer
 
 # class Solution:
 #     def minOperations(self, nums: List[int], k: int) -> int:
