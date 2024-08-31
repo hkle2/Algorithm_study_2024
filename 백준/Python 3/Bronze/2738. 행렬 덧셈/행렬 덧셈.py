@@ -4,9 +4,9 @@ N, M = map(int, sys.stdin.readline().split())
 A = []
 B = []
 
-for n in range(N):
+for _ in range(N):
     A.append(list(map(int, sys.stdin.readline().split())))
-for n in range(N):
+for _ in range(N):
     B.append(list(map(int, sys.stdin.readline().split())))
 
 for i in range(len(A)):
