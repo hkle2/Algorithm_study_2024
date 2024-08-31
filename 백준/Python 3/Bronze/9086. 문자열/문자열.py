@@ -2,6 +2,6 @@ import sys
 
 T = int(sys.stdin.readline().strip())
 
-for t in range(T):
-    string = sys.stdin.readline().strip()
-    print(string[0] + string[-1])
+for _ in range(T):
+    s = sys.stdin.readline().strip()
+    print(s[0] + s[-1])
