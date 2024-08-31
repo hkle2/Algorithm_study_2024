@@ -5,7 +5,7 @@ N = int(sys.stdin.readline().strip())
 
 answer = 0
 
-for i in range(N):
+for _ in range(N):
     a, b = map(int, sys.stdin.readline().split())
     answer += a * b
 
