@@ -1,9 +1,8 @@
 import sys
 
+N = int(sys.stdin.readline().strip())
 papers = [[0 for _ in range(100)] for _ in range(100)]
 answer = 0
-
-N = int(sys.stdin.readline().strip())
 
 for _ in range(N):
     x, y = map(int, sys.stdin.readline().split())
