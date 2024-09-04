@@ -1,10 +1,18 @@
+# class Solution:
+#     def canBeEqual(self, s1: str, s2: str) -> bool:
+#         str_1 = s1[2] + s1[1] + s1[0] + s1[3]
+#         str_2 = s1[0] + s1[3] + s1[2] + s1[1]
+#         str_3 = s1[2] + s1[3] + s1[0] + s1[1]
+#         if s2 == s1 or s2 == str_1 or s2 == str_2 or s2 == str_3:
+#             return True
+#         return False
+
 class Solution:
     def canBeEqual(self, s1: str, s2: str) -> bool:
         str_1 = s1[2] + s1[1] + s1[0] + s1[3]
         str_2 = s1[0] + s1[3] + s1[2] + s1[1]
         str_3 = s1[2] + s1[3] + s1[0] + s1[1]
-        # s2와 일치하는 게 하나라도 있으면 True, 없으면 False
-        if s2 == s1 or s2 == str_1 or s2 == str_2 or s2 == str_3:
+        if s2 in (s1, str_1, str_2, str_3):
             return True
         return False
 
