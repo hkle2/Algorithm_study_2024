@@ -1,19 +1,25 @@
 class Solution:
     def canBeEqual(self, s1: str, s2: str) -> bool:
-        l_s1 = list(s1)
-        l_s2 = list(s2)
-        if l_s1 == l_s2:
-            return True
-        l_s1[0], l_s1[2] = l_s1[2], l_s1[0]
-        if l_s1 == l_s2:
-            return True
-        l_s1[1], l_s1[3] = l_s1[3], l_s1[1]
-        if l_s1 == l_s2:
-            return True
-        l_s1[0], l_s1[2] = l_s1[2], l_s1[0]
-        if l_s1 == l_s2:
+        if sorted(s1[::2]) == sorted(s2[::2]) and sorted(s1[1::2]) == sorted(s2[1::2]):
             return True
         return False
+
+# class Solution:
+#     def canBeEqual(self, s1: str, s2: str) -> bool:
+#         l_s1 = list(s1)
+#         l_s2 = list(s2)
+#         if l_s1 == l_s2:
+#             return True
+#         l_s1[0], l_s1[2] = l_s1[2], l_s1[0]
+#         if l_s1 == l_s2:
+#             return True
+#         l_s1[1], l_s1[3] = l_s1[3], l_s1[1]
+#         if l_s1 == l_s2:
+#             return True
+#         l_s1[0], l_s1[2] = l_s1[2], l_s1[0]
+#         if l_s1 == l_s2:
+#             return True
+#         return False
 
 # class Solution:
 #     def canBeEqual(self, s1: str, s2: str) -> bool:
