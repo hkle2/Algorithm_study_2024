@@ -7,15 +7,12 @@ class Solution:
         l_s1[0], l_s1[2] = l_s1[2], l_s1[0]
         if l_s1 == l_s2:
             return True
-        print(l_s1)
         l_s1[1], l_s1[3] = l_s1[3], l_s1[1]
         if l_s1 == l_s2:
             return True
-        print(l_s1)
         l_s1[0], l_s1[2] = l_s1[2], l_s1[0]
         if l_s1 == l_s2:
             return True
-        print(l_s1)
         return False
 
 # class Solution:
