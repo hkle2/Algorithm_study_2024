@@ -22,8 +22,8 @@ class Solution:
             mat[r] = [x + 1 for x in mat[r]]
             for col in mat:
                 col[c] += 1
-        for i in range(len(mat)):
-            for j in range(len(mat[0])):
+        for i in range(m):
+            for j in range(n):
                 if mat[i][j] % 2 != 0:
                     answer += 1
         return answer
