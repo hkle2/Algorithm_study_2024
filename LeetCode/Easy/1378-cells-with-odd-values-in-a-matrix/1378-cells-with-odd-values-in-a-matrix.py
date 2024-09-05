@@ -4,10 +4,10 @@ class Solution:
         mat = [[0 for _ in range(n)] for _ in range(m)]
         for i in range(len(indices)):
             r, c = indices[i]
-            for row in range(n):
-                mat[r][row] += 1
-            for col in range(m):
-                mat[col][c] += 1
+            for j in range(n):
+                mat[r][j] += 1
+            for k in range(m):
+                mat[k][c] += 1
         for i in range(m):
             for j in range(n):
                 if mat[i][j] % 2 != 0:
