@@ -1,6 +1,7 @@
 class Solution:
     def convertDateToBinary(self, date: str) -> str:
-        bin_date_list = []
-        for num in date.split("-"):
-            bin_date_list.append(bin(int(num))[2:])
-        return "-".join(bin_date_list)
+        l_date = date.split("-")
+        bin_date = []
+        for num in l_date:
+            bin_date.append(bin(int(num))[2:])
+        return "-".join(bin_date)
