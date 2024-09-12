@@ -1,9 +1,20 @@
+# class Solution:
+#     def findTheDistanceValue(self, arr1: List[int], arr2: List[int], d: int) -> int:
+#         answer = 0
+#         for i in range(len(arr1)):
+#             for j in range(len(arr2)):
+#                 if abs(arr1[i] - arr2[j]) <= d:
+#                     break
+#             else:
+#                 answer += 1
+#         return answer
+
 class Solution:
     def findTheDistanceValue(self, arr1: List[int], arr2: List[int], d: int) -> int:
         answer = 0
-        for i in range(len(arr1)):
-            for j in range(len(arr2)):
-                if abs(arr1[i] - arr2[j]) <= d:
+        for num in arr1:
+            for i in range(d + 1):
+                if (num + i in arr2) or (num - i in arr2):
                     break
             else:
                 answer += 1
