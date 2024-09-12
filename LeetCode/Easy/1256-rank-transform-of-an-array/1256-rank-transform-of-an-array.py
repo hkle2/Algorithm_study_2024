@@ -1,10 +1,17 @@
+# class Solution:
+#     def arrayRankTransform(self, arr: List[int]) -> List[int]:
+#         # set, dict
+#         rank_dict = {x: (i + 1) for i, x in enumerate(sorted(set(arr)))}
+#         print(rank_dict)
+#         return []
+
 class Solution:
     def arrayRankTransform(self, arr: List[int]) -> List[int]:
         answer = []
-        l_s = sorted(list(set(arr)))
+        sorted_arr = sorted(set(arr))
         rank = {}
-        for i, s in enumerate(l_s):
-            rank[s] = i+1
+        for i, n in enumerate(sorted_arr):
+            rank[n] = i+1
         for num in arr:
             answer.append(rank[num])
         return answer
