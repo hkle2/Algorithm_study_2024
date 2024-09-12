@@ -12,9 +12,10 @@
 class Solution:
     def findTheDistanceValue(self, arr1: List[int], arr2: List[int], d: int) -> int:
         answer = 0
+        s = set(arr2)
         for num in arr1:
             for i in range(d + 1):
-                if (num + i in arr2) or (num - i in arr2):
+                if (num + i in s) or (num - i in s):
                     break
             else:
                 answer += 1
