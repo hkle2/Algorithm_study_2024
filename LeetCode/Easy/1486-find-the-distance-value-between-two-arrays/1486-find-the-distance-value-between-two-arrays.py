@@ -20,7 +20,7 @@ class Solution:
         for num in arr1:
             flag = True
             for i in range(len(arr2)):
-                if abs(num-arr2[i]) <= d:
+                if abs(num - arr2[i]) <= d:
                     flag = False
                     break
             if flag:
