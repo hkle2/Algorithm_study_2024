@@ -1,4 +1,5 @@
 # from collections import defaultdict
+
 # class Solution:
 #     def repeatedCharacter(self, s: str) -> str:
 #         # for, dictionary
@@ -11,9 +12,18 @@
 
 class Solution:
     def repeatedCharacter(self, s: str) -> str:
-        cnt = []
+        visited = set()
         for i in range(len(s)):
-            if s[i] in cnt:
+            if s[i] in visited:
                 return s[i]
             else:
-                cnt.append(s[i])
+                visited.add(s[i])
+
+# class Solution:
+#     def repeatedCharacter(self, s: str) -> str:
+#         visited = []
+#         for i in range(len(s)):
+#             if s[i] in visited:
+#                 return s[i]
+#             else:
+#                 visited.append(s[i])
