@@ -1,7 +1,7 @@
 class Solution:
     def repeatedCharacter(self, s: str) -> str:
-        answer = [s[0]]
-        for i in range(1, len(s)):
+        answer = []
+        for i in range(len(s)):
             if s[i] in answer:
                 return s[i]
             else:
