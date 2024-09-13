@@ -13,11 +13,11 @@
 class Solution:
     def repeatedCharacter(self, s: str) -> str:
         visited = set()
-        for i in range(len(s)):
-            if s[i] in visited:
-                return s[i]
+        for c in s:
+            if c in visited:
+                return c
             else:
-                visited.add(s[i])
+                visited.add(c)
 
 # class Solution:
 #     def repeatedCharacter(self, s: str) -> str:
