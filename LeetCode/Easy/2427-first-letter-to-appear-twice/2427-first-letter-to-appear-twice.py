@@ -11,9 +11,9 @@
 
 class Solution:
     def repeatedCharacter(self, s: str) -> str:
-        answer = []
-        for i in range(len(s)):
-            if s[i] in answer:
-                return s[i]
+        cnt = []
+        for c in s:
+            if c in cnt:
+                return c
             else:
-                answer.append(s[i])
+                cnt.append(c)
