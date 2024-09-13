@@ -14,8 +14,7 @@ class Solution:
         for c in s:
             if c in visited:
                 return c
-            else:
-                visited.add(c)
+            visited.add(c)
 
 # class Solution:
 #     def repeatedCharacter(self, s: str) -> str:
