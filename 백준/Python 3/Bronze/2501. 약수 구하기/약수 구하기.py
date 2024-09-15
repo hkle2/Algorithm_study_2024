@@ -1,13 +1,12 @@
 import sys
 
 N, K = map(int, sys.stdin.readline().split())
-k = 0
+q = []
 
-for q in range(1, N+1):
-    if N % q == 0:
-        k += 1
-        if k == K:
-            print(q)
-            break
-if k != K:
+for n in range(1, N+1):
+    if N % n == 0:
+        q.append(n)  
+if len(q) >= K:
+    print(q[K-1])
+else:
     print(0)
