@@ -8,6 +8,6 @@ while X > line:
     line += 1
 
 if line % 2 == 0:
-    print(f"{X}/{line- (X - 1)}")
+    print(f"{X}/{line - (X - 1)}")
 else:
     print(f"{line - (X - 1)}/{X}")
