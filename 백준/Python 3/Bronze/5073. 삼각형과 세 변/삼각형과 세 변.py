@@ -3,7 +3,7 @@ import sys
 while True:
     angles = []
     a, b, c = map(int, sys.stdin.readline().split())
-    if a == 0 and b == 0 and c == 0:
+    if a == b == c == 0:
         break
     angles.append(a)
     angles.append(b)
