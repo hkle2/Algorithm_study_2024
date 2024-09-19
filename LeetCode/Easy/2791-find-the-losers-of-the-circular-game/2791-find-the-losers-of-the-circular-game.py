@@ -10,9 +10,4 @@ class Solution:
                 i += 1
             else:
                 break
-        print(friends)
-        answer = []
-        for i in range(n):
-            if i not in friends:
-                answer.append(i+1)
-        return answer
+        return [i+1 for i in range(n) if i not in friends]
