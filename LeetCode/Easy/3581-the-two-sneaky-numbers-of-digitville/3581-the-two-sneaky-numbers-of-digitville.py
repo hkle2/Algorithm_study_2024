@@ -13,9 +13,9 @@ class Solution:
     def getSneakyNumbers(self, nums: List[int]) -> List[int]:
         seen = []
         answer = []
-        for num in nums:
-            if num not in seen:
-                seen.append(num)
+        for i in range(len(nums)):
+            if nums[i] not in seen:
+                seen.append(nums[i])
             else:
-                answer.append(num)
+                answer.append(nums[i])
         return answer
