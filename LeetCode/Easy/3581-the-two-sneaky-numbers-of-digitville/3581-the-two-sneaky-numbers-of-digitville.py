@@ -1,3 +1,11 @@
+# class Solution:
+#     def getSneakyNumbers(self, nums: List[int]) -> List[int]:
+#         seen = []
+#         answer = []
+#         for num in nums:
+#             if num in seen:
+#         return answer
+
 # from collections import Counter
 
 # class Solution:
@@ -11,11 +19,11 @@
 
 class Solution:
     def getSneakyNumbers(self, nums: List[int]) -> List[int]:
-        seen = []
+        seen = set()
         answer = []
         for i in range(len(nums)):
             if nums[i] not in seen:
-                seen.append(nums[i])
+                seen.add(nums[i])
             else:
                 answer.append(nums[i])
         return answer
