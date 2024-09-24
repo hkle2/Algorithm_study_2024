@@ -1,14 +1,13 @@
 # class Solution:
 #     def mostFrequentEven(self, nums: List[int]) -> int:
-#         answer = 100000
-#         nums = [num for num in nums if num % 2 == 0]
-#         if not nums:
+#         even_num = [x for x in nums if x % 2 == 0]
+#         if not even_num:
 #             return -1
-#         c = Counter(nums)
-#         for key, value in c.items():
-#             if value == max(c.values()):
-#                 answer = min(key, answer)
-#         return answer
+#         c = Counter(even_num)
+#         max_freq = max(list(c.values()))
+#         # max_freq만큼 등장한 숫자들 찾아서 가장 작은 값을 리턴
+#         print(c, max_freq)
+#         return 0
 
 class Solution:
     def mostFrequentEven(self, nums: List[int]) -> int:
@@ -16,8 +15,7 @@ class Solution:
         if not nums:
             return -1
         c = Counter(nums)
-        c = sorted(c.items(), key=lambda x: (-x[1], x[0]))
-        return c[0][0]
+        return sorted(c.items(), key=lambda x: (-x[1], x[0]))[0][0]
 
 # class Solution:
 #     def mostFrequentEven(self, nums: List[int]) -> int:
