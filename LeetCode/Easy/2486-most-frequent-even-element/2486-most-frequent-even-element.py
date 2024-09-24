@@ -2,14 +2,13 @@ class Solution:
     def mostFrequentEven(self, nums: List[int]) -> int:
         answer = 100000
         nums = [num for num in nums if num % 2 == 0]
+        if not nums:
+            return -1
         c = Counter(nums)
         for key, value in c.items():
             if value == max(c.values()):
                 answer = min(key, answer)
-        if answer != 100000:
-            return answer
-        else:
-            return -1
+        return answer
 
 # class Solution:
 #     def mostFrequentEven(self, nums: List[int]) -> int:
