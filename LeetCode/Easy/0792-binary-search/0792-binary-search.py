@@ -10,15 +10,21 @@ class Solution:
         # 4. 후보군을 좁혀서 다시 1부터 시작
         l = 0
         r = len(nums) - 1
+        answer = -1
         while l <= r:
             mid = (l + r) // 2
             if nums[mid] == target:
-                return mid
+                answer = mid
+                break
             elif nums[mid] > target:
+                # 현재 위치보다 왼쪽에 찾고자 하는 값이 있다.
+                # 그러므로 r 값을 mid -1로 지정
                 r = mid - 1
             else:
+                # 현재 위치보다 오른쪽에 찾고자 하는 값이 있다.
+                # 그러므로 l 값을 mid + 1로 지정
                 l = mid + 1
-        return -1
+        return answer
 
 # class Solution:
 #     def search(self, nums: List[int], target: int) -> int:
