@@ -1,12 +1,17 @@
 class Solution:
     def freqAlphabets(self, s: str) -> str:
-        answer = ""
-        i = 0
-        while i < len(s):
-            if i + 2 < len(s) and s[i+2] == "#":
-                answer += chr(int(s[i:i+2]) + ord("a") - 1)
-                i += 3
+        d = {}
+        for i in range(1, 27):
+            if i < 10:
+                d[str(i)] = chr(i+96)
             else:
-                answer += chr(int(s[i]) + ord("a") - 1)
-                i += 1
+                d[str(i) + "#"] = chr(i+96)
+        sorted_d = sorted(d.keys(), reverse=True, key=lambda x: len(x))
+        answer = ""
+        while s:
+            for key in sorted_d:
+                if s.startswith(key):
+                    answer += d[key]
+                    s = s[len(key):]
+                    break
         return answer
